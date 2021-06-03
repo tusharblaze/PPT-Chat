@@ -7,11 +7,11 @@ import { UserRegistrationFormComponent } from './user-registration-form/user-reg
 const routes: Routes = [
   {
     path: '',
-    component: UserRegistrationFormComponent
+    component: UserLoginFormComponent
   } ,
   {
     path: 'login',
-    component: UserLoginFormComponent
+    component: UserRegistrationFormComponent
   }
 ];
 
