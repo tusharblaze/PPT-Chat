@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { UserDashboardModule } from './user-dashboard/user-dashboard.module';
 import { UserRegisterModule } from './user-register/user-register.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSidenavModule } from '@angular/material';
 
 @NgModule({
   declarations: [

@@ -1,1 +1,51 @@
-<p>user-dashboard works!</p>
+<div class="container">
+    <div class="row chat-container">
+        <div class="col-4">
+           <div class="row p-3 basic-nav">
+               <div class="col-8 px-0">
+                <span>
+                    <img src="" alt="">
+                </span>
+                <span class="px-3 text-light">
+                    User-name
+                </span>
+               </div>
+               <div class="col-4 px-0 text-right">
+                <span>
+                    <i class="fa fa-pencil p-1 rounded-circle text-light border edit-icon"></i>
+                </span>
+               </div>
+           </div>
+           <div class="row">
+               <input type="text" class="form-control rounded-0" placeholder="Search User Name">
+           </div>
+           <div class="row chat-list-container text-white">
+               <div class="col-12 py-2" *ngFor= "let user of userList">
+                    <div class="row">
+                        <div class="col-8 d-flex px-2">
+                            <div class="">
+                                <img src="" alt="">
+                            </div>
+                            <div class="">
+                                <span>
+                                    {{user}}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-4 px-2">
+                            <div class="text-right">
+                                <span>
+                                    10:30 PM
+                                </span>
+                            </div>
+                            <div class="text-right align-item-end">
+                                <i class="fa fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+           </div>
+        </div>
+        <div class="col-8 chat-message-container"></div>
+    </div>
+</div>
