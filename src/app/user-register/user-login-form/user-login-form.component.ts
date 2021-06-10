@@ -1,4 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { UrlConstant } from 'src/app/url-constant/url-constant';
+import { user } from '../entity/user';
+import { UserRegisterService } from '../user-register.service';
 
 declare var $:any;
 
@@ -9,7 +13,7 @@ declare var $:any;
 })
 export class UserLoginFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http:HttpClient,private userService:UserRegisterService) { }
 
   ngOnInit() {
   }
@@ -23,4 +27,11 @@ export class UserLoginFormComponent implements OnInit {
     $('#container').addClass('right-panel-active');
   }
 
+  getUserDetails(){
+     this.userService.getAllUserDetails().subscribe(data=>{
+       console.log(data);
+     },error=>{
+       console.log(error);
+     })
+  }
 }

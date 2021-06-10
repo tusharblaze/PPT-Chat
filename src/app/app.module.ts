@@ -7,6 +7,7 @@ import { UserDashboardModule } from './user-dashboard/user-dashboard.module';
 import { UserRegisterModule } from './user-register/user-register.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material';
+import { UserRegisterService } from './user-register/user-register.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { MatSidenavModule } from '@angular/material';
     UserRegisterModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [UserRegisterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
